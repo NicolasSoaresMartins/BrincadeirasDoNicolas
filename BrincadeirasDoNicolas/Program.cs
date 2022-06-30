@@ -1,21 +1,179 @@
 ﻿using BrincadeirasDoNicolas.Matematica;
+using System.Collections.Generic;
 
 namespace BrincadeirasDoNicolas
 {
     public class Program
     {
         //enum cor { Vermelho = 1, azul, laranja, preto }
-        enum menu {Soma = 1, Subtracao, Divisao, Multiplicacao, Potencia, Raiz, Sair}
+        //enum menu {Soma = 1, Subtracao, Divisao, Multiplicacao, Potencia, Raiz, Sair}
         //enum cor { Vermelho = 1, Azul, Verde, Branco, Amarelo }
         //private static ConsoleKey[] OPERADORES = new ConsoleKey[] { ConsoleKey.Add, ConsoleKey.Subtract, ConsoleKey.Multiply, ConsoleKey.Divide };
+
+        //struct produto
+        //{
+        //   public string nome;
+        //    string descricao;
+        //    double valor;
+
+        //    public produto(string nome, string descricacao, double valor)
+        //    {
+        //        this.nome = nome;
+        //        this.descricao = descricacao;
+        //        this.valor = valor;
+        //    }
+
+        //    public void Exibir()
+        //    {
+        //        Console.WriteLine($"Nome: {this.nome}");
+        //        Console.WriteLine($"Descrição: {this.descricao}");
+        //        Console.WriteLine($"Valor : {this.valor}");
+        //    }
+        //    public void valorDesconto(double porc)
+        //    {
+        //        double desconto = this.valor * porc / 100;
+        //        Console.WriteLine(this.valor - desconto);
+        //    }
+        //}
 
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("1-Soma\n2-Subtração\n3-Divisao\n4-Multiplicacao\n5-Potencia\n6-Raiz\n7-Sair");
-            menu opcao = (menu)int.Parse(Console.ReadLine());
-                        
 
+
+
+
+            //LISTA "ARRAY"
+
+
+            List<string> lista = new List<string>();
+
+            lista.Add("rapaz");
+            lista.Add("uiiii");
+            lista.Add("vish");
+            lista.Add("que isso meu filho");
+            lista.Add("ele gosta");
+            lista.Add("ratinho nho");
+            lista.Add("ueepaa");
+
+            lista.RemoveAll(lista => lista == "uiiii");
+            //lista.RemoveAt(1);
+
+            foreach (string i in lista)
+            {
+                Console.WriteLine(i);  
+            }
+
+
+
+
+            //bola.Exibir();
+
+            //produto bola = new produto("bola de basquete", "muito boa", 10);
+
+
+            //bool escolheuSair = false;
+            //while (!escolheuSair)
+            //{
+            //    Console.WriteLine("1-Soma\n2-Subtração\n3-Divisao\n4-Multiplicaçao\n5-Potencia\n6-Raiz\n7-Sair");
+            //    menu opcao = (menu)int.Parse(Console.ReadLine());
+
+            //    Console.WriteLine(opcao);
+
+            //    switch (opcao)
+            //    {
+            //        case menu.Sair:
+            //            escolheuSair = true;
+            //            break;
+            //        case menu.Soma:
+            //            soma();
+            //            break;
+            //        case menu.Subtracao:
+            //            sub();
+            //            break;
+            //        case menu.Divisao:
+            //            div();
+            //            break;
+            //        case menu.Potencia:
+            //            pot();
+            //            break;
+            //        case menu.Raiz:
+            //            raiz();
+            //            break;
+
+
+            //    }
+
+            //    Console.Clear();
+            //}
+
+
+
+            //static void soma()
+            //{
+            //    Console.WriteLine("Digite o primeiro numero da soma");
+            //    int num1 = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("Digite o segundo numero");
+            //    int num2 = int.Parse(Console.ReadLine());
+            //    int receba = num1 - num2;
+            //    Console.WriteLine($"Esse é o resultado da sua soma = {receba}");
+            //    Console.WriteLine("Aperte ENTER para voltar ao menu");
+            //    Console.ReadLine();
+            //}
+            //static void sub()
+            //{
+            //    Console.WriteLine("Digite o primeiro numero da soma");
+            //    int num1 = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("Digite o segundo numero");
+            //    int num2 = int.Parse(Console.ReadLine());
+            //    int receba = num1 - num2;
+            //    Console.WriteLine($"Esse é o resultado da sua subtração = {receba}");
+            //    Console.WriteLine("Aperte ENTER para voltar ao menu");
+            //    Console.ReadLine();
+            //}
+            //static void mult()
+            //{
+            //    Console.WriteLine("Digite o primeiro numero da soma");
+            //    int num1 = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("Digite o segundo numero");
+            //    int num2 = int.Parse(Console.ReadLine());
+            //    int receba = num1 * num2;
+            //    Console.WriteLine($"Esse é o resultado da sua multiplicação = {receba}");
+            //    Console.WriteLine("Aperte ENTER para voltar ao menu");
+            //    Console.ReadLine();
+            //}
+            //static void div()
+            //{
+            //    Console.WriteLine("Digite o primeiro numero da soma");
+            //    int num1 = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("Digite o segundo numero");
+            //    int num2 = int.Parse(Console.ReadLine());
+            //    double receba = num1 / num2;
+            //    Console.WriteLine($"Esse é o resultado da sua divisão = {receba}");
+            //    Console.WriteLine("Aperte ENTER para voltar ao menu");
+            //    Console.ReadLine();
+            //}
+            //static void pot()
+            //{
+            //    Console.WriteLine("Digite o primeiro numero da soma");
+            //    int num1 = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("Digite o segundo numero");
+            //    int num2 = int.Parse(Console.ReadLine());
+            //    int receba = (int)Math.Pow(num1, num2);
+            //    Console.WriteLine($"Esse é o resultado da sua divisão = {receba}");
+            //    Console.WriteLine("Aperte ENTER para voltar ao menu");
+            //    Console.ReadLine();
+            //}
+            //static void raiz()
+            //{
+            //    Console.WriteLine("Digite o primeiro numero da soma");
+            //    int num1 = int.Parse(Console.ReadLine());
+
+            //    double receba = (double)Math.Sqrt(num1);
+            //    Console.WriteLine($"Esse é o resultado da sua divisão = {receba}");
+            //    Console.WriteLine("Aperte ENTER para voltar ao menu");
+            //    Console.ReadLine();
+            //}
 
 
 
